@@ -1,156 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swiss Alps Adventure - Avipro Travels</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Avipro<span>Travels</span></h1>
-            </div>
-            <nav>
-                <div class="mobile-menu">☰</div>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="packages.html">Tour Packages</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="admin-login.html" class="btn">Admin Login</a></li>
-                </ul>
-            </nav>
+      <div class="container header-container">
+        <div class="logo">
+          <h1>Avipro<span>Travels</span></h1>
         </div>
+        <nav>
+          <div class="mobile-menu">☰</div>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Tour Packages</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="admin-login.php" class="btn">Admin Login</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <!-- Page Header -->
     <section class="page-header">
-        <div class="container">
-            <h1>Package Details</h1>
-            <div class="breadcrumb">
-                <a href="index.html">Home</a> <span>/</span> <a href="packages.html">Tour Packages</a> <span>/</span> <a href="#">Package Details</a>
-            </div>
+      <div class="container">
+        <h1>Package Details</h1>
+        <div class="breadcrumb">
+          <a href="index.html">Home</a> <span>/</span>
+          <a href="packages.html">Tour Packages</a> <span>/</span>
+          <a href="#">Package Details</a>
         </div>
+      </div>
     </section>
-    
+
     <!-- Package Details -->
     <section class="section">
-        <div class="container">
-            <div class="package-details">
-                <div class="package-gallery">
-                    <div class="main-image">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Swiss Alps" id="main-image">
-                    </div>
-                    <div class="thumbnail-gallery">
-                        <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 1">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 2">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 3">
-                        </div>
-                        <div class="thumbnail" onclick="changeImage('https://images.unsplash.com-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Thumbnail 4">
-                        </div>
-                    </div>
-                    
-                    <div class="package-description" style="margin-top: 30px;">
-                        <h2>Swiss Alps Adventure</h2>
-                        <p>Experience the breathtaking beauty of the Swiss Alps with this all-inclusive package. This 7-day adventure takes you through some of the most stunning landscapes in Europe.</p>
-                        
-                        <h3>Itinerary</h3>
-                        <ul>
-                            <li><strong>Day 1:</strong> Arrival in Zurich, transfer to Lucerne</li>
-                            <li><strong>Day 2:</strong> Explore Lucerne and Mount Pilatus</li>
-                            <li><strong>Day 3:</strong> Scenic train journey to Interlaken</li>
-                            <li><strong>Day 4:</strong> Jungfraujoch - Top of Europe excursion</li>
-                            <li><strong>Day 5:</strong> Free day for optional activities</li>
-                            <li><strong>Day 6:</strong> Travel to Zermatt, view Matterhorn</li>
-                            <li><strong>Day 7:</strong> Departure from Zurich</li>
-                        </ul>
-                        
-                        <h3>Inclusions</h3>
-                        <ul>
-                            <li>6 nights accommodation in 4-star hotels</li>
-                            <li>Daily breakfast</li>
-                            <li>All transfers as per itinerary</li>
-                            <li>Guided tours as mentioned</li>
-                            <li>Jungfraujoch excursion</li>
-                            <li>24/7 customer support</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="package-sidebar">
-                    <div class="price-box">
-                        <div class="price">$1,299</div>
-                        <p>per person</p>
-                    </div>
-                    
-                    <div class="booking-form">
-                        <h3>Book This Package</h3>
-                        <form id="booking-form">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" id="email" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Phone</label>
-                                <input type="tel" id="phone" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="destination">Destination</label>
-                                <input type="text" id="destination" class="form-control" value="Swiss Alps Adventure" readonly>
-                            </div>
-                            <div class="form-group">
-                                <label for="travel-date">Travel Date</label>
-                                <input type="date" id="travel-date" class="form-control" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="persons">Number of Persons</label>
-                                <select id="persons" class="form-control" required>
-                                    <option value="">Select</option>
-                                    <option value="1">1 Person</option>
-                                    <option value="2">2 Persons</option>
-                                    <option value="3">3 Persons</option>
-                                    <option value="4">4 Persons</option>
-                                    <option value="5+">5+ Persons</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Message (Optional)</label>
-                                <textarea id="message" class="form-control"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-secondary" style="width: 100%;">Submit Booking</button>
-                        </form>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="package-details">
+          <div class="package-gallery">
+            <div class="main-image">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                alt="Swiss Alps"
+                id="main-image"
+              />
             </div>
+            <div class="thumbnail-gallery">
+              <div
+                class="thumbnail"
+                onclick="changeImage('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Thumbnail 1"
+                />
+              </div>
+              <div
+                class="thumbnail"
+                onclick="changeImage('https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Thumbnail 2"
+                />
+              </div>
+              <div
+                class="thumbnail"
+                onclick="changeImage('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Thumbnail 3"
+                />
+              </div>
+              <div
+                class="thumbnail"
+                onclick="changeImage('https://images.unsplash.com-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')"
+              >
+                <img
+                  src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                  alt="Thumbnail 4"
+                />
+              </div>
+            </div>
+
+            <div class="package-description" style="margin-top: 30px">
+              <h2>Swiss Alps Adventure</h2>
+              <p>
+                Experience the breathtaking beauty of the Swiss Alps with this
+                all-inclusive package. This 7-day adventure takes you through
+                some of the most stunning landscapes in Europe.
+              </p>
+
+              <h3>Itinerary</h3>
+              <ul>
+                <li>
+                  <strong>Day 1:</strong> Arrival in Zurich, transfer to Lucerne
+                </li>
+                <li>
+                  <strong>Day 2:</strong> Explore Lucerne and Mount Pilatus
+                </li>
+                <li>
+                  <strong>Day 3:</strong> Scenic train journey to Interlaken
+                </li>
+                <li>
+                  <strong>Day 4:</strong> Jungfraujoch - Top of Europe excursion
+                </li>
+                <li>
+                  <strong>Day 5:</strong> Free day for optional activities
+                </li>
+                <li>
+                  <strong>Day 6:</strong> Travel to Zermatt, view Matterhorn
+                </li>
+                <li><strong>Day 7:</strong> Departure from Zurich</li>
+              </ul>
+
+              <h3>Inclusions</h3>
+              <ul>
+                <li>6 nights accommodation in 4-star hotels</li>
+                <li>Daily breakfast</li>
+                <li>All transfers as per itinerary</li>
+                <li>Guided tours as mentioned</li>
+                <li>Jungfraujoch excursion</li>
+                <li>24/7 customer support</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="package-sidebar">
+            <div class="price-box">
+              <div class="price">$1,299</div>
+              <p>per person</p>
+            </div>
+
+            <div class="booking-form">
+              <h3>Book This Package</h3>
+              <form id="booking-form">
+                <div class="form-group">
+                  <label for="name">Full Name</label>
+                  <input type="text" id="name" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" class="form-control" required />
+                </div>
+                <div class="form-group">
+                  <label for="destination">Destination</label>
+                  <input
+                    type="text"
+                    id="destination"
+                    class="form-control"
+                    value="Swiss Alps Adventure"
+                    readonly
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="travel-date">Travel Date</label>
+                  <input
+                    type="date"
+                    id="travel-date"
+                    class="form-control"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="persons">Number of Persons</label>
+                  <select id="persons" class="form-control" required>
+                    <option value="">Select</option>
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Persons</option>
+                    <option value="3">3 Persons</option>
+                    <option value="4">4 Persons</option>
+                    <option value="5+">5+ Persons</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message (Optional)</label>
+                  <textarea id="message" class="form-control"></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-secondary"
+                  style="width: 100%"
+                >
+                  Submit Booking
+                </button>
+              </form>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <!-- Same footer as index.html -->
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Avipro Travels. All Rights Reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <!-- Same footer as index.html -->
         </div>
+        <div class="copyright">
+          <p>&copy; 2025 Avipro Travels. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/main.js"></script>
     <script src="js/forms.js"></script>
-</body>
+  </body>
 </html>
