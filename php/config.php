@@ -15,8 +15,7 @@ define('UPLOAD_PATH', '../assets/uploads/');
 define('MAX_FILE_SIZE', 5 * 1024 * 1024); // 5MB
 define('ALLOWED_TYPES', ['image/jpeg', 'image/png', 'image/gif']);
 
-// Session Configuration
-session_start();
+
 
 // Create database connection
 function getDBConnection() {
