@@ -58,12 +58,9 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <ul>
                     <li><a href="admin-panel.php">Dashboard</a></li>
                     <li><a href="packages.php" class="active">Travel Packages</a></li>
-                    <li><a href="bookings.php">Bookings</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
                     <li><a href="enquiries.php">Enquiries</a></li>
-                    <li><a href="content.php">Site Content</a></li>
-                    <li><a href="users.php">Users</a></li>
-                    <li><a href="settings.php">Settings</a></li>
-                    <li><a href="../php/logout.php">Logout</a></li>
+
                 </ul>
             </div>
         </div>

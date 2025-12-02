@@ -256,8 +256,8 @@
         <div class="logo">
           <h1>
             <a href="index.html">Avipro<span>Yatra</span></a>
+            <p class="tagline">Experience Incredible India</p>
           </h1>
-          <p class="tagline">Experience Incredible India</p>
         </div>
         <nav>
           <div class="mobile-menu">☰</div>
@@ -298,22 +298,22 @@
           <div class="slideshow" id="slideshow">
             <!-- Slides will be added dynamically by JavaScript -->
           </div>
-          
+
           <div class="slideshow-nav">
             <button class="nav-btn prev-btn">❮</button>
             <button class="nav-btn next-btn">❯</button>
           </div>
-          
+
           <div class="slide-caption">
             <h3 id="slide-title">Title</h3>
             <p id="slide-description">Description</p>
           </div>
         </div>
-        
+
         <div class="slideshow-dots" id="dots-container">
           <!-- Dots will be added dynamically -->
         </div>
-        
+
         <div class="slideshow-controls">
           <button class="control-btn" id="playPauseBtn">Pause</button>
           <button class="control-btn" id="prevBtn">Previous</button>
@@ -347,107 +347,108 @@
           id: 1,
           src: "images/tajmahal.jpg", // Add image URL here
           title: "Taj Mahal, Agra",
-          description: "The iconic symbol of love, a UNESCO World Heritage Site",
-          location: "Agra, Uttar Pradesh"
+          description:
+            "The iconic symbol of love, a UNESCO World Heritage Site",
+          location: "Agra, Uttar Pradesh",
         },
         {
           id: 2,
           src: "images/jaipurpalace.jpeg", // Add image URL here
           title: "Jaipur Palace",
           description: "The Pink City's magnificent City Palace",
-          location: "Jaipur, Rajasthan"
+          location: "Jaipur, Rajasthan",
         },
         {
           id: 3,
           src: "images/keralabackwaters.jpg", // Add image URL here
           title: "Kerala Backwaters",
           description: "Serene houseboat cruise through palm-fringed canals",
-          location: "Alleppey, Kerala"
+          location: "Alleppey, Kerala",
         },
         {
           id: 4,
           src: "images/goabeach.jpg", // Add image URL here
           title: "Goa Beaches",
           description: "Golden sands and azure waters of Goa's coastline",
-          location: "North Goa"
+          location: "North Goa",
         },
         {
           id: 5,
           src: "images/himalayanpeak.jpg", // Add image URL here
           title: "Himalayan Peaks",
           description: "Majestic snow-capped mountains of the Himalayas",
-          location: "Leh-Ladakh"
+          location: "Leh-Ladakh",
         },
         {
           id: 6,
           src: "images/kashmirdallake.webp", // Add image URL here
           title: "Kashmir Dal Lake",
           description: "Shikara rides on the beautiful Dal Lake",
-          location: "Srinagar, Kashmir"
+          location: "Srinagar, Kashmir",
         },
         {
           id: 7,
           src: "images/mysorepalace.jpg", // Add image URL here
           title: "Mysore Palace",
           description: "Illuminated palace during Dasara festival",
-          location: "Mysore, Karnataka"
+          location: "Mysore, Karnataka",
         },
         {
           id: 8,
           src: "images/rannofkutch.jpg", // Add image URL here
           title: "Rann of Kutch",
           description: "White salt desert under the full moon",
-          location: "Gujarat"
+          location: "Gujarat",
         },
         {
           id: 9,
           src: "images/meghalaya.jpg", // Add image URL here
           title: "Meghalaya Living Root Bridges",
           description: "Natural bridges grown from tree roots",
-          location: "Cherrapunji, Meghalaya"
+          location: "Cherrapunji, Meghalaya",
         },
         {
           id: 10,
           src: "images/varanasighats.jpeg", // Add image URL here
           title: "Varanasi Ghats",
           description: "Spiritual rituals on the banks of River Ganges",
-          location: "Varanasi, Uttar Pradesh"
+          location: "Varanasi, Uttar Pradesh",
         },
         {
           id: 11,
           src: "images/andamannicobar.webp", // Add image URL here
           title: "Andaman Islands",
           description: "Crystal clear waters and coral reefs",
-          location: "Andaman & Nicobar Islands"
+          location: "Andaman & Nicobar Islands",
         },
         {
           id: 12,
           src: "images/howrah.jpeg", // Add image URL here
           title: "Kolkata Howrah Bridge",
           description: "Iconic cantilever bridge over Hooghly River",
-          location: "Kolkata, West Bengal"
+          location: "Kolkata, West Bengal",
         },
         {
           id: 13,
           src: "images/munnar.webp", // Add image URL here
           title: "Munnar Tea Plantations",
           description: "Rolling hills covered with tea gardens",
-          location: "Munnar, Kerala"
+          location: "Munnar, Kerala",
         },
         {
           id: 14,
           src: "images/khajuraho.jpg", // Add image URL here
           title: "Khajuraho Temples",
           description: "Ancient temples with intricate carvings",
-          location: "Khajuraho, Madhya Pradesh"
+          location: "Khajuraho, Madhya Pradesh",
         },
         {
           id: 15,
           src: "images/goldentemple.jpeg", // Add image URL here
           title: "Amritsar Golden Temple",
           description: "Sacred Sikh shrine covered in gold",
-          location: "Amritsar, Punjab"
-        }
+          location: "Amritsar, Punjab",
+        },
       ];
 
       // Slideshow functionality
@@ -457,43 +458,47 @@
 
       // Initialize slideshow
       function initSlideshow() {
-        const slideshow = document.getElementById('slideshow');
-        const dotsContainer = document.getElementById('dots-container');
-        const galleryGrid = document.getElementById('gallery-grid');
-        
+        const slideshow = document.getElementById("slideshow");
+        const dotsContainer = document.getElementById("dots-container");
+        const galleryGrid = document.getElementById("gallery-grid");
+
         // Create slides
         images.forEach((image, index) => {
           // Create slide
-          const slide = document.createElement('div');
-          slide.className = 'slide';
+          const slide = document.createElement("div");
+          slide.className = "slide";
           slide.innerHTML = `
             <img src="${image.src}" alt="${image.title}" onerror="this.src='https://via.placeholder.com/1000x500/3498db/ffffff?text=Avipro+Travels'" />
           `;
           slideshow.appendChild(slide);
-          
+
           // Create dot
-          const dot = document.createElement('span');
-          dot.className = `dot ${index === 0 ? 'active' : ''}`;
-          dot.addEventListener('click', () => goToSlide(index));
+          const dot = document.createElement("span");
+          dot.className = `dot ${index === 0 ? "active" : ""}`;
+          dot.addEventListener("click", () => goToSlide(index));
           dotsContainer.appendChild(dot);
-          
+
           // Create gallery item
-          const galleryItem = document.createElement('div');
-          galleryItem.className = 'gallery-item';
+          const galleryItem = document.createElement("div");
+          galleryItem.className = "gallery-item";
           galleryItem.innerHTML = `
-            <img src="${image.src}" alt="${image.title}" onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=${encodeURIComponent(image.title)}'" />
+            <img src="${image.src}" alt="${
+            image.title
+          }" onerror="this.src='https://via.placeholder.com/300x200/3498db/ffffff?text=${encodeURIComponent(
+            image.title
+          )}'" />
             <div class="gallery-item-overlay">
               <h4>${image.title}</h4>
               <p>${image.location}</p>
             </div>
           `;
-          galleryItem.addEventListener('click', () => goToSlide(index));
+          galleryItem.addEventListener("click", () => goToSlide(index));
           galleryGrid.appendChild(galleryItem);
         });
-        
+
         // Update first slide caption
         updateCaption();
-        
+
         // Start slideshow
         startSlideshow();
       }
@@ -501,15 +506,15 @@
       // Go to specific slide
       function goToSlide(index) {
         currentSlide = index;
-        const slideshow = document.getElementById('slideshow');
+        const slideshow = document.getElementById("slideshow");
         slideshow.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
+
         // Update dots
         updateDots();
-        
+
         // Update caption
         updateCaption();
-        
+
         // Restart interval if paused
         if (!isPlaying) {
           startSlideshow();
@@ -530,17 +535,19 @@
 
       // Update dots
       function updateDots() {
-        const dots = document.querySelectorAll('.dot');
+        const dots = document.querySelectorAll(".dot");
         dots.forEach((dot, index) => {
-          dot.classList.toggle('active', index === currentSlide);
+          dot.classList.toggle("active", index === currentSlide);
         });
       }
 
       // Update caption
       function updateCaption() {
         const image = images[currentSlide];
-        document.getElementById('slide-title').textContent = image.title;
-        document.getElementById('slide-description').textContent = `${image.description} - ${image.location}`;
+        document.getElementById("slide-title").textContent = image.title;
+        document.getElementById(
+          "slide-description"
+        ).textContent = `${image.description} - ${image.location}`;
       }
 
       // Start slideshow
@@ -548,16 +555,16 @@
         if (slideInterval) clearInterval(slideInterval);
         slideInterval = setInterval(nextSlide, 4000); // Change slide every 4 seconds
         isPlaying = true;
-        document.getElementById('playPauseBtn').textContent = 'Pause';
-        document.getElementById('playPauseBtn').classList.remove('pause');
+        document.getElementById("playPauseBtn").textContent = "Pause";
+        document.getElementById("playPauseBtn").classList.remove("pause");
       }
 
       // Pause slideshow
       function pauseSlideshow() {
         clearInterval(slideInterval);
         isPlaying = false;
-        document.getElementById('playPauseBtn').textContent = 'Play';
-        document.getElementById('playPauseBtn').classList.add('pause');
+        document.getElementById("playPauseBtn").textContent = "Play";
+        document.getElementById("playPauseBtn").classList.add("pause");
       }
 
       // Toggle play/pause
@@ -570,47 +577,55 @@
       }
 
       // Event listeners
-      document.addEventListener('DOMContentLoaded', () => {
+      document.addEventListener("DOMContentLoaded", () => {
         initSlideshow();
-        
+
         // Navigation buttons
-        document.querySelector('.prev-btn').addEventListener('click', prevSlide);
-        document.querySelector('.next-btn').addEventListener('click', nextSlide);
-        
+        document
+          .querySelector(".prev-btn")
+          .addEventListener("click", prevSlide);
+        document
+          .querySelector(".next-btn")
+          .addEventListener("click", nextSlide);
+
         // Control buttons
-        document.getElementById('playPauseBtn').addEventListener('click', togglePlayPause);
-        document.getElementById('prevBtn').addEventListener('click', prevSlide);
-        document.getElementById('nextBtn').addEventListener('click', nextSlide);
-        
+        document
+          .getElementById("playPauseBtn")
+          .addEventListener("click", togglePlayPause);
+        document.getElementById("prevBtn").addEventListener("click", prevSlide);
+        document.getElementById("nextBtn").addEventListener("click", nextSlide);
+
         // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'ArrowLeft') prevSlide();
-          if (e.key === 'ArrowRight') nextSlide();
-          if (e.key === ' ') {
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowLeft") prevSlide();
+          if (e.key === "ArrowRight") nextSlide();
+          if (e.key === " ") {
             e.preventDefault();
             togglePlayPause();
           }
         });
-        
+
         // Touch/swipe support for mobile
         let touchStartX = 0;
         let touchEndX = 0;
-        
-        const slideshowContainer = document.querySelector('.slideshow-container');
-        
-        slideshowContainer.addEventListener('touchstart', (e) => {
+
+        const slideshowContainer = document.querySelector(
+          ".slideshow-container"
+        );
+
+        slideshowContainer.addEventListener("touchstart", (e) => {
           touchStartX = e.changedTouches[0].screenX;
         });
-        
-        slideshowContainer.addEventListener('touchend', (e) => {
+
+        slideshowContainer.addEventListener("touchend", (e) => {
           touchEndX = e.changedTouches[0].screenX;
           handleSwipe();
         });
-        
+
         function handleSwipe() {
           const swipeThreshold = 50;
           const diff = touchStartX - touchEndX;
-          
+
           if (Math.abs(diff) > swipeThreshold) {
             if (diff > 0) {
               // Swipe left - next slide
@@ -621,13 +636,13 @@
             }
           }
         }
-        
+
         // Pause on hover
-        slideshowContainer.addEventListener('mouseenter', () => {
+        slideshowContainer.addEventListener("mouseenter", () => {
           if (isPlaying) pauseSlideshow();
         });
-        
-        slideshowContainer.addEventListener('mouseleave', () => {
+
+        slideshowContainer.addEventListener("mouseleave", () => {
           if (!isPlaying) startSlideshow();
         });
       });

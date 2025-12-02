@@ -61,12 +61,8 @@ $recent_packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 <ul>
                     <li><a href="admin-panel.php" class="active">Dashboard</a></li>
                     <li><a href="packages.php">Travel Packages</a></li>
-                    <li><a href="bookings.php">Bookings</a></li>
+                    <li><a href="bookings.html">Bookings</a></li>
                     <li><a href="enquiries.php">Enquiries</a></li>
-                    <li><a href="content.php">Site Content</a></li>
-                    <li><a href="users.php">Users</a></li>
-                    <li><a href="settings.php">Settings</a></li>
-                    <li><a href="../php/logout.php">Logout</a></li>
                 </ul>
             </div>
         </div>
@@ -96,7 +92,7 @@ $recent_packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="stat-label">Pending Enquiries</div>
                 </div>
                 <div class="stat-card danger">
-                    <div class="stat-number">$45,800</div>
+                    <div class="stat-number">INR 45,800</div>
                     <div class="stat-label">Total Revenue</div>
                 </div>
             </div>
@@ -105,7 +101,7 @@ $recent_packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <div class="admin-card">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
                     <h3>Recent Bookings</h3>
-                    <a href="bookings.php" class="btn">View All</a>
+                    <a href="bookings.html" class="btn">View All</a>
                 </div>
                 
                 <div class="table-responsive">
@@ -174,7 +170,7 @@ $recent_packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td>#PKG<?php echo str_pad($package['id'], 3, '0', STR_PAD_LEFT); ?></td>
                                 <td><?php echo htmlspecialchars($package['title']); ?></td>
                                 <td><?php echo htmlspecialchars($package['destination']); ?></td>
-                                <td>$<?php echo number_format($package['price'], 2); ?></td>
+                                <td>₹<?php echo number_format($package['price'], 2); ?></td>
                                 <td><?php echo htmlspecialchars($package['duration']); ?></td>
                                 <td>
                                     <span class="status-badge <?php echo $package['is_active'] ? 'confirmed' : 'cancelled'; ?>">
