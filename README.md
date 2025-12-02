@@ -58,30 +58,120 @@ A travel website that lets you seemlessly navigate through options and lets you 
 
 ## Installation & Setup Instructions
 
-1.  **Clone the repository:**
+🚀 Avipro Travels - Installation Guide
+📥 Step-by-Step Installation Process
+Step 1: Download and Install XAMPP
+Download XAMPP
+1.	Visit: https://www.apachefriends.org/
+2.	Download the version for your operating system
+Install XAMPP
+1.	Run the installer
+2.	Select components: Apache, MySQL, PHP, phpMyAdmin
+3.	Choose installation directory (default: C:\xampp)
+4.	Complete installation
+Start Services
+1.	Open XAMPP Control Panel
+2.	Start Apache and MySQL
+3.	You should see green indicators
+________________________________________
 
-    ```bash
-    git clone https://github.com/N-PCs/IWP-PROJECT-Avipro-Travels.git
-    ```
+Step 2: Setup Project Files
+Extract Project Files
+bash
+# Extract the avipro-travels.zip to:
+C:\xampp\htdocs\avipro-travels\
+Folder Structure
+text
+C:\xampp\htdocs\avipro-travels\
+├── index.html
+├── about.html
+├── packages.html
+├── package-details.html
+├── contact.html
+├── admin-login.html
+├── admin/
+├── css/
+├── js/
+├── php/
+├── database/
+└── assets/
+Verify File Structure
+•	Ensure all folders are properly extracted
+•	Check that php/ and database/ folders exist
+________________________________________
 
-2.  **Set up the database:**
+Step 3: Database Setup
+Access phpMyAdmin
+1.	Open web browser
+2.	Go to: http://localhost/phpmyadmin
+Create Database
+sql
+-- In phpMyAdmin:
+-- 1. Click "New" in left sidebar
+-- 2. Enter database name: "avipro_travels"
+-- 3. Click "Create"
+Import Database Schema
+1.	Click on avipro_travels database
+2.	Go to Import tab
+3.	Click Choose File
+4.	Select: avipro-travels/database/avipro_travels.sql
+5.	Click Go
+Verify Database Import
+You should see these tables:
+•	admin_users
+•	packages
+•	bookings
+•	enquiries
+•	site_content
+________________________________________
 
-    *   Create a new database for the project.
-    *   Import any provided database schema or sample data.
+Step 4: Configuration
+Edit Database Configuration
+Open file: avipro-travels/php/config.php
+Update database credentials if different:
+php
+// In config.php - Update if your setup is different
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'avipro_travels');
+define('DB_USER', 'root');      // Default XAMPP username
+define('DB_PASS', '');          // Default XAMPP password (empty)
+Configure File Uploads
+1.	Create uploads directory:
+bash
+# Create folder if it doesn't exist
+mkdir C:\xampp\htdocs\avipro-travels\assets\uploads
+2.	Set folder permissions:
+bash
+# Right-click on 'uploads' folder
+# Properties → Security → Edit permissions
+# Allow "Write" permissions for Apache user
+________________________________________
 
-3.  **Configure the database connection:**
+Step 5: Test Installation
+Start Local Server
+•	Ensure XAMPP Apache and MySQL are running
+•	Green indicators in XAMPP control panel
+Access Website
+1.	Open web browser
+2.	Go to: http://localhost/avipro-travels
+Verify Frontend
+•	Homepage should load with travel packages
+•	Navigation should work between pages
+•	Images should display properly
+________________________________________
 
-    *   Locate the database connection configuration file (likely in a `config` directory or a file like `db.php`).
-    *   Update the database credentials (hostname, username, password, database name) to match your database setup.
+🚀 Execution & Usage
+Accessing the Website
+Frontend Access
+text
+URL: http://localhost/avipro-travels
+Admin Panel Access
+text
+URL: http://localhost/avipro-travels/admin-login.html
+Default Credentials:
+Username: admin
+Password: admin123
 
-4.  **Configure the web server:**
-
-    *   Configure your web server to point to the project's root directory.
-    *   Ensure that PHP is properly configured and enabled for your web server.
-
-5.  **Access the website:**
-
-    *   Open your web browser and navigate to the project's URL.
 
 ## Usage Examples & API Documentation
 
