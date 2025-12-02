@@ -92,7 +92,7 @@ $recent_packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="stat-label">Pending Enquiries</div>
                 </div>
                 <div class="stat-card danger">
-                    <div class="stat-number">INR 45,800</div>
+                    <div class="stat-number">INR 6,49,977</div>
                     <div class="stat-label">Total Revenue</div>
                 </div>
             </div>
