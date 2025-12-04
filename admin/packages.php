@@ -152,7 +152,7 @@ $packages = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                 <td>#PKG<?php echo str_pad($package['id'], 3, '0', STR_PAD_LEFT); ?></td>
                                 <td><?php echo htmlspecialchars($package['title']); ?></td>
                                 <td><?php echo htmlspecialchars($package['destination']); ?></td>
-                                <td>$<?php echo number_format($package['price'], 2); ?></td>
+                                <td>INR <?php echo number_format($package['price'], 2); ?></td>
                                 <td><?php echo htmlspecialchars($package['duration']); ?></td>
                                 <td><?php echo date('M d, Y', strtotime($package['created_at'])); ?></td>
                                 <td>
